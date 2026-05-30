@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "greeting": "Hello, I'm",
+      "role": "Full Stack Developer",
+      "description": "I build modern digital experiences with cutting-edge technologies. Passionate about clean code, intuitive design, and performance.",
+      "cta_projects": "View my work",
+      "cta_contact": "Get in touch"
+    },
+    "featured": {
+      "title": "Featured Projects",
+      "description": "A selection of my most recent work",
+      "view_all": "View all projects"
+    },
+    "stack": {
+      "title": "Tech Stack",
+      "description": "Technologies I work with daily"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A collection of projects I've worked on",
+    "technologies": "Technologies",
+    "live_demo": "Live Demo",
+    "source_code": "Source Code"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Get to know me better",
+    "bio_title": "My Story",
+    "experience_title": "Experience",
+    "skills_title": "Skills",
+    "education_title": "Education"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Let's work together",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "name_placeholder": "Your name",
+      "email_placeholder": "your{'@'}email.com",
+      "subject_placeholder": "What's this about?",
+      "message_placeholder": "Tell me about your project..."
+    },
+    "info": {
+      "title": "Let's Connect",
+      "description": "I'm always open to new opportunities and interesting projects. Feel free to reach out!",
+      "location": "Location",
+      "availability": "Availability",
+      "available": "Available for new projects"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "built_with": "Built with"
+  }
+}

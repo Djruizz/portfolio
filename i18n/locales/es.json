@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "greeting": "Hola, soy",
+      "role": "Desarrollador Full Stack",
+      "description": "Construyo experiencias digitales modernas con tecnologías de vanguardia. Apasionado por el código limpio, el diseño intuitivo y el rendimiento.",
+      "cta_projects": "Ver mi trabajo",
+      "cta_contact": "Contáctame"
+    },
+    "featured": {
+      "title": "Proyectos Destacados",
+      "description": "Una selección de mis trabajos más recientes",
+      "view_all": "Ver todos los proyectos"
+    },
+    "stack": {
+      "title": "Stack Tecnológico",
+      "description": "Tecnologías con las que trabajo a diario"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description": "Una colección de proyectos en los que he trabajado",
+    "technologies": "Tecnologías",
+    "live_demo": "Demo en vivo",
+    "source_code": "Código fuente"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Conóceme un poco mejor",
+    "bio_title": "Mi Historia",
+    "experience_title": "Experiencia",
+    "skills_title": "Habilidades",
+    "education_title": "Educación"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "Trabajemos juntos",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje",
+      "name_placeholder": "Tu nombre",
+      "email_placeholder": "tu{'@'}email.com",
+      "subject_placeholder": "¿De qué se trata?",
+      "message_placeholder": "Cuéntame sobre tu proyecto..."
+    },
+    "info": {
+      "title": "Conectemos",
+      "description": "Siempre estoy abierto a nuevas oportunidades y proyectos interesantes. ¡No dudes en contactarme!",
+      "location": "Ubicación",
+      "availability": "Disponibilidad",
+      "available": "Disponible para nuevos proyectos"
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "built_with": "Construido con"
+  }
+}
