@@ -105,15 +105,12 @@ onMounted(() => {
         opacity: 1,
         duration: 0.1,
       })
-      .to(
-        codeCard,
-        {
-          x: offsetX,
-          scale: 2.2,
-          duration: 0.8,
-          ease: "power2.inOut",
-        },
-      )
+      .to(codeCard, {
+        x: offsetX,
+        scale: 2.2,
+        duration: 0.8,
+        ease: "power2.inOut",
+      })
 
       .to(
         projectsContainer,
@@ -275,13 +272,11 @@ onMounted(() => {
                   ref="projectsContainerRef"
                   class="absolute inset-x-3 top-12 bottom-3 opacity-0 pointer-events-none flex flex-col"
                 >
-                  <div
-                    class="flex-1 overflow-hidden grid grid-cols-1 gap-1.5 pe-4"
-                  >
+                  <div class="space-y-1.5 overflow-y-auto pe-4 scrollbar-hide">
                     <div
                       v-for="project in projects"
                       :key="project.id"
-                      @click="navigateTo('/projects')"
+                      @click="navigateTo(`/projects/${project.id}`)"
                       class="project-card-inner bg-muted/50 border border-default rounded p-1.5 hover:border-primary/40 transition-colors cursor-pointer"
                     >
                       <div class="flex items-start justify-between gap-1.5">

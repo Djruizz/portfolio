@@ -47,6 +47,7 @@ export function useProfile() {
   const email = "dario.jruiz31@gmail.com";
   const location = "Jalisco, México";
   const avatar = "/avatar.jpg";
+  const siteName = "daruiz.dev";
 
   const socialLinks: SocialLink[] = [
     {
@@ -279,6 +280,7 @@ export function useProfile() {
     fullName,
     email,
     location,
+    siteName,
     avatar,
     socialLinks,
     techStack,

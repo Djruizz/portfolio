@@ -3,6 +3,7 @@ import type { NavigationMenuItem } from "@nuxt/ui";
 
 const { t } = useI18n();
 const localePath = useLocalePath();
+const { siteName } = useProfile();
 
 const items = computed<NavigationMenuItem[]>(() => [
   { label: t("nav.home"), to: localePath("/") },
@@ -33,7 +34,7 @@ const items = computed<NavigationMenuItem[]>(() => [
         </div>
         <span
           class="font-mono font-bold text-highlighted text-lg tracking-tight"
-          >dario<span class="text-primary">.dev</span></span
+          >{{ siteName.split('.')[0] }}<span class="text-primary">.{{ siteName.split('.')[1] }}</span></span
         >
       </div>
     </template>
