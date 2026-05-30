@@ -8,10 +8,11 @@
   "home": {
     "hero": {
       "greeting": "Hello, I'm",
-      "role": "Full Stack Developer",
+      "role": "Frontend Developer",
       "description": "I build modern digital experiences with cutting-edge technologies. Passionate about clean code, intuitive design, and performance.",
       "cta_projects": "View my work",
-      "cta_contact": "Get in touch"
+      "cta_contact": "Get in touch",
+      "passion": "Building things"
     },
     "featured": {
       "title": "Featured Projects",
@@ -20,7 +21,8 @@
     },
     "stack": {
       "title": "Tech Stack",
-      "description": "Technologies I work with daily"
+      "description": "Technologies I work with daily",
+      "years": "y"
     }
   },
   "projects": {

@@ -8,10 +8,11 @@
   "home": {
     "hero": {
       "greeting": "Hola, soy",
-      "role": "Desarrollador Full Stack",
+      "role": "Desarrollador Frontend",
       "description": "Construyo experiencias digitales modernas con tecnologías de vanguardia. Apasionado por el código limpio, el diseño intuitivo y el rendimiento.",
       "cta_projects": "Ver mi trabajo",
-      "cta_contact": "Contáctame"
+      "cta_contact": "Contáctame",
+      "passion": "Crear cosas"
     },
     "featured": {
       "title": "Proyectos Destacados",
@@ -20,7 +21,8 @@
     },
     "stack": {
       "title": "Stack Tecnológico",
-      "description": "Tecnologías con las que trabajo a diario"
+      "description": "Tecnologías con las que trabajo a diario",
+      "years": "a"
     }
   },
   "projects": {

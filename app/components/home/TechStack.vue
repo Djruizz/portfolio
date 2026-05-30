@@ -62,12 +62,12 @@ const skillsByCategory = computed(() =>
             >
               <UIcon :name="skill.icon" class="size-5 text-toned shrink-0" />
               <span class="text-sm text-toned flex-1">{{ skill.name }}</span>
-              <div class="w-20 h-1.5 rounded-full bg-muted overflow-hidden">
-                <div
-                  class="h-full rounded-full bg-linear-to-r from-primary to-secondary transition-all duration-500"
-                  :style="{ width: `${skill.level}%` }"
-                />
-              </div>
+              <span
+                v-if="skill.yearsOfExperience"
+                class="text-xs text-muted font-mono"
+              >
+                {{ skill.yearsOfExperience }}{{ t("home.stack.years") }}
+              </span>
             </div>
           </div>
         </UCard>
