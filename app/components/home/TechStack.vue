@@ -60,13 +60,13 @@ const skillsByCategory = computed(() =>
               :key="skill.name"
               class="flex items-center gap-3"
             >
-              <UIcon :name="skill.icon" class="size-5 text-toned shrink-0" />
+              <UIcon :name="skill.icon" class="size-5 shrink-0" :style="{ color: skill.color }" />
               <span class="text-sm text-toned flex-1">{{ skill.name }}</span>
               <span
-                v-if="skill.yearsOfExperience"
+                v-if="skill.startYear"
                 class="text-xs text-muted font-mono"
               >
-                {{ skill.yearsOfExperience }}{{ t("home.stack.years") }}
+                {{ new Date().getFullYear() - skill.startYear }}y
               </span>
             </div>
           </div>

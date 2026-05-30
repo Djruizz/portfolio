@@ -30,7 +30,15 @@
     "description": "A collection of projects I've worked on",
     "technologies": "Technologies",
     "live_demo": "Live Demo",
-    "source_code": "Source Code"
+    "source_code": "Source Code",
+    "back_to_projects": "Back to Projects",
+    "context_title": "The Problem",
+    "solution_title": "My Solution",
+    "challenge_title": "Technical Challenge",
+    "tech_stack": "Tech Stack",
+    "quick_links": "Quick Links",
+    "roles_title": "Roles & Responsibilities",
+    "gallery_title": "Project Gallery"
   },
   "about": {
     "title": "About Me",

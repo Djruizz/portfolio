@@ -18,20 +18,26 @@ const { techStack } = useProfile();
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        <div
+        <a
           v-for="(skill, index) in techStack"
           :key="skill.name"
-          class="group relative bg-elevated/50 border border-default rounded-xl p-4 text-center hover:border-primary/40 transition-all duration-300 opacity-0 animate-fade-in-up"
+          :href="skill.docsUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative bg-elevated/50 border border-default rounded-xl p-4 text-center hover:border-primary/40 transition-all duration-300 opacity-0 animate-fade-in-up block"
           :class="`stagger-${Math.min(index + 1, 6)}`"
         >
           <div
             class="absolute inset-0 bg-linear-to-br from-primary/5 to-secondary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           />
           <div class="relative z-10 space-y-2">
-            <UIcon :name="skill.icon" class="size-8 text-primary mx-auto" />
+            <UIcon :name="skill.icon" class="size-8 mx-auto" :style="{ color: skill.color }" />
             <p class="text-sm font-medium text-highlighted">{{ skill.name }}</p>
+            <p v-if="skill.startYear" class="text-xs text-muted font-mono">
+              {{ new Date().getFullYear() - skill.startYear }}y
+            </p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>

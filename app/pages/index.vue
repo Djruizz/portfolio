@@ -48,6 +48,11 @@ onMounted(() => {
   if (!isDesktop.value) return;
 
   const ctx = gsap.context(() => {
+    const cardRect = codeCard.getBoundingClientRect();
+    const viewportCenterX = window.innerWidth / 2;
+    const cardCenterX = cardRect.left + cardRect.width / 2;
+    const offsetX = viewportCenterX - cardCenterX;
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: hero,
@@ -103,11 +108,11 @@ onMounted(() => {
       .to(
         codeCard,
         {
+          x: offsetX,
           scale: 2.2,
           duration: 0.8,
           ease: "power2.inOut",
         },
-        // 0.15,
       )
 
       .to(

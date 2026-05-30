@@ -1,13 +1,20 @@
 export interface Project {
   id: string;
   title: string;
+  subtitle: { en: string; es: string };
   description: { en: string; es: string };
   image: string;
+  gallery?: string[];
   technologies: string[];
   liveUrl?: string;
   repoUrl?: string;
   featured: boolean;
   year: number;
+  category?: { en: string; es: string };
+  context?: { en: string; es: string };
+  solution?: { en: string; es: string };
+  challenge?: { en: string; es: string };
+  roles?: { en: string[]; es: string[] };
 }
 
 export interface Experience {
@@ -23,7 +30,9 @@ export interface Skill {
   name: string;
   icon: string;
   category: "frontend" | "backend" | "tools" | "other";
-  yearsOfExperience?: number;
+  startYear?: number;
+  color: string;
+  docsUrl?: string;
 }
 
 export interface SocialLink {
@@ -59,190 +68,207 @@ export function useProfile() {
 
   const techStack: Skill[] = [
     {
-      name: "Vue.js",
+      name: "Vue 3",
       icon: "i-simple-icons-vuedotjs",
       category: "frontend",
-      yearsOfExperience: 4,
+      startYear: 2022,
+      color: "#42b883",
+      docsUrl: "https://vuejs.org/",
     },
     {
-      name: "Nuxt",
+      name: "Nuxt.js",
       icon: "i-simple-icons-nuxtdotjs",
       category: "frontend",
-      yearsOfExperience: 3,
+      startYear: 2024,
+      color: "#00dc82",
+      docsUrl: "https://nuxt.com/",
     },
     {
       name: "TypeScript",
       icon: "i-simple-icons-typescript",
       category: "frontend",
-      yearsOfExperience: 4,
+      startYear: 2024,
+      color: "#3178c6",
+      docsUrl: "https://www.typescriptlang.org/",
+    },
+    {
+      name: "JavaScript",
+      icon: "i-simple-icons-javascript",
+      category: "frontend",
+      startYear: 2021,
+      color: "#f7df1e",
+      docsUrl: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    },
+    {
+      name: "HTML5",
+      icon: "i-simple-icons-html5",
+      category: "frontend",
+      startYear: 2020,
+      color: "#e34f26",
+      docsUrl: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    },
+    {
+      name: "CSS3",
+      icon: "i-simple-icons-css3",
+      category: "frontend",
+      startYear: 2020,
+      color: "#1572b6",
+      docsUrl: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     {
       name: "Tailwind CSS",
       icon: "i-simple-icons-tailwindcss",
       category: "frontend",
-      yearsOfExperience: 3,
+      startYear: 2023,
+      color: "#06b6d4",
+      docsUrl: "https://tailwindcss.com/",
     },
     {
-      name: "React",
-      icon: "i-simple-icons-react",
+      name: "Bootstrap",
+      icon: "i-simple-icons-bootstrap",
       category: "frontend",
-      yearsOfExperience: 2,
+      startYear: 2023,
+      color: "#7952b3",
+      docsUrl: "https://getbootstrap.com/",
+    },
+    {
+      name: "Supabase",
+      icon: "i-simple-icons-supabase",
+      category: "backend",
+      startYear: 2024,
+      color: "#3ecf8e",
+      docsUrl: "https://supabase.com/",
+    },
+    {
+      name: "Laravel",
+      icon: "i-simple-icons-laravel",
+      category: "backend",
+      startYear: 2023,
+      color: "#ff2d20",
+      docsUrl: "https://laravel.com/",
+    },
+    {
+      name: "MySQL",
+      icon: "i-simple-icons-mysql",
+      category: "backend",
+      startYear: 2023,
+      color: "#4479a1",
+      docsUrl: "https://dev.mysql.com/doc/",
     },
     {
       name: "Node.js",
       icon: "i-simple-icons-nodedotjs",
       category: "backend",
-      yearsOfExperience: 4,
-    },
-    {
-      name: "PostgreSQL",
-      icon: "i-simple-icons-postgresql",
-      category: "backend",
-      yearsOfExperience: 3,
-    },
-    {
-      name: "Docker",
-      icon: "i-simple-icons-docker",
-      category: "tools",
-      yearsOfExperience: 2,
-    },
-    { name: "Git", icon: "i-simple-icons-git", category: "tools", yearsOfExperience: 5 },
-    {
-      name: "Figma",
-      icon: "i-simple-icons-figma",
-      category: "tools",
+      startYear: 2022,
+      color: "#5fa04e",
+      docsUrl: "https://nodejs.org/",
     },
     {
       name: "Python",
       icon: "i-simple-icons-python",
       category: "backend",
-      yearsOfExperience: 2,
+      startYear: 2024,
+      color: "#3776ab",
+      docsUrl: "https://www.python.org/",
     },
     {
-      name: "MongoDB",
-      icon: "i-simple-icons-mongodb",
-      category: "backend",
-      yearsOfExperience: 3,
+      name: "Git",
+      icon: "i-simple-icons-git",
+      category: "tools",
+      startYear: 2021,
+      color: "#f05032",
+      docsUrl: "https://git-scm.com/",
+    },
+    {
+      name: "GitHub",
+      icon: "i-simple-icons-github",
+      category: "tools",
+      startYear: 2021,
+      color: "#ffffff",
+      docsUrl: "https://github.com/",
+    },
+    {
+      name: "pnpm",
+      icon: "i-simple-icons-pnpm",
+      category: "tools",
+      startYear: 2023,
+      color: "#f69220",
+      docsUrl: "https://pnpm.io/",
+    },
+    {
+      name: "Composer",
+      icon: "i-simple-icons-composer",
+      category: "tools",
+      startYear: 2023,
+      color: "#885630",
+      docsUrl: "https://getcomposer.org/",
     },
   ];
 
   const projects: Project[] = [
     {
-      id: "ecommerce-platform",
-      title: "E-Commerce Platform",
-      description: {
-        en: "A full-featured e-commerce platform with real-time inventory management, payment processing, and an admin dashboard.",
-        es: "Una plataforma de e-commerce completa con gestión de inventario en tiempo real, procesamiento de pagos y panel de administración.",
+      id: "nutri-app",
+      title: "Nutri App",
+      subtitle: {
+        en: "Full-stack nutrition management platform",
+        es: "Plataforma integral de gestión nutricional",
       },
-      image: "/projects/ecommerce.jpg",
-      technologies: ["Nuxt", "Vue.js", "Node.js", "PostgreSQL", "Stripe"],
-      liveUrl: "https://example.com",
-      repoUrl: "https://github.com/dario/ecommerce",
+      description: {
+        en: "Built a full-stack nutrition management platform designed for nutritionists and patients, featuring role-based access control, personalized meal plans, progress tracking, and real-time data synchronization.",
+        es: "Desarrollé una plataforma integral de gestión nutricional para nutriólogos y pacientes, con control de acceso basado en roles, planes de alimentación personalizados, seguimiento de progreso y sincronización de datos en tiempo real.",
+      },
+      image: "/projects/nutri-app.png",
+      gallery: ["/projects/nutri-app.png", "/projects/nutri-app2.png"],
+      technologies: ["Nuxt.js", "TypeScript", "Supabase", "Tailwind CSS"],
+      liveUrl: "https://nutritionist-app-659.pages.dev/",
       featured: true,
-      year: 2025,
-    },
-    {
-      id: "task-management",
-      title: "Task Management App",
-      description: {
-        en: "A collaborative task management application with drag-and-drop, real-time updates, and team workspaces.",
-        es: "Una aplicación colaborativa de gestión de tareas con arrastrar y soltar, actualizaciones en tiempo real y espacios de trabajo en equipo.",
+      year: 2026,
+      category: {
+        en: "Health & Wellness",
+        es: "Salud y Bienestar",
       },
-      image: "/projects/tasks.jpg",
-      technologies: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
-      liveUrl: "https://example.com",
-      repoUrl: "https://github.com/dario/task-app",
-      featured: true,
-      year: 2025,
-    },
-    {
-      id: "ai-dashboard",
-      title: "AI Analytics Dashboard",
-      description: {
-        en: "An intelligent analytics dashboard with AI-powered insights, custom reports, and data visualization.",
-        es: "Un dashboard de análisis inteligente con insights potenciados por IA, reportes personalizados y visualización de datos.",
+      context: {
+        en: "Nutritionists needed a centralized platform to manage multiple patients, track their progress, and create personalized meal plans. Existing solutions were either too complex or lacked real-time collaboration features between nutritionists and their patients.",
+        es: "Los nutriólogos necesitaban una plataforma centralizada para gestionar múltiples pacientes, seguir su progreso y crear planes de alimentación personalizados. Las soluciones existentes eran demasiado complejas o carecían de funciones de colaboración en tiempo real entre nutriólogos y sus pacientes.",
       },
-      image: "/projects/dashboard.jpg",
-      technologies: ["Nuxt", "Python", "TensorFlow", "D3.js", "Docker"],
-      liveUrl: "https://example.com",
-      featured: true,
-      year: 2024,
-    },
-    {
-      id: "social-network",
-      title: "Social Network API",
-      description: {
-        en: "A RESTful API for a social network with real-time messaging, notifications, and media handling.",
-        es: "Una API RESTful para una red social con mensajería en tiempo real, notificaciones y manejo de medios.",
+      solution: {
+        en: "I architected a full-stack application using Nuxt.js for the frontend and Supabase as the backend. Implemented role-based access control (RBAC) to separate nutritionist and patient views, real-time data synchronization using Supabase Realtime, and a comprehensive dashboard for tracking nutritional goals and progress over time.",
+        es: "Arquitecté una aplicación full-stack usando Nuxt.js para el frontend y Supabase como backend. Implementé control de acceso basado en roles (RBAC) para separar las vistas de nutriólogos y pacientes, sincronización de datos en tiempo real usando Supabase Realtime, y un dashboard comprehensivo para seguir objetivos nutricionales y progreso a lo largo del tiempo.",
       },
-      image: "/projects/social.jpg",
-      technologies: ["Node.js", "Express", "MongoDB", "Redis", "WebSocket"],
-      repoUrl: "https://github.com/dario/social-api",
-      featured: false,
-      year: 2024,
-    },
-    {
-      id: "portfolio-v1",
-      title: "Portfolio v1",
-      description: {
-        en: "My first portfolio website built with vanilla HTML, CSS, and JavaScript.",
-        es: "Mi primer sitio web de portafolio construido con HTML, CSS y JavaScript vanilla.",
+      challenge: {
+        en: "The main architectural challenge was designing a flexible permission system that allowed nutritionists to manage their patients' data while ensuring patients could only access their own information. I solved this by implementing Row Level Security (RLS) policies in Supabase combined with middleware-based route guards in Nuxt.js, creating a secure multi-tenant architecture without compromising performance.",
+        es: "El principal reto arquitectónico fue diseñar un sistema de permisos flexible que permitiera a los nutriólogos gestionar los datos de sus pacientes mientras aseguraba que los pacientes solo pudieran acceder a su propia información. Resolví esto implementando políticas de Row Level Security (RLS) en Supabase combinadas con guards de rutas basados en middleware en Nuxt.js, creando una arquitectura multi-tenant segura sin comprometer el rendimiento.",
       },
-      image: "/projects/portfolio.jpg",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      liveUrl: "https://example.com",
-      featured: false,
-      year: 2023,
-    },
-    {
-      id: "weather-app",
-      title: "Weather App",
-      description: {
-        en: "A beautiful weather application with location-based forecasts, interactive maps, and severe weather alerts.",
-        es: "Una hermosa aplicación del clima con pronósticos basados en ubicación, mapas interactivos y alertas de clima severo.",
+      roles: {
+        en: [
+          "Full-stack development",
+          "Database architecture design",
+          "Authentication & authorization implementation",
+          "Real-time features integration",
+          "UI/UX design and implementation",
+        ],
+        es: [
+          "Desarrollo full-stack",
+          "Diseño de arquitectura de base de datos",
+          "Implementación de autenticación y autorización",
+          "Integración de funciones en tiempo real",
+          "Diseño e implementación de UI/UX",
+        ],
       },
-      image: "/projects/weather.jpg",
-      technologies: ["Vue.js", "OpenWeather API", "Mapbox", "Tailwind CSS"],
-      liveUrl: "https://example.com",
-      repoUrl: "https://github.com/dario/weather-app",
-      featured: false,
-      year: 2024,
     },
   ];
 
   const experiences: Experience[] = [
     {
-      id: "senior-dev",
-      role: "Senior Full Stack Developer",
-      company: "Tech Company",
-      period: "2023 - Present",
-      description: {
-        en: "Leading development of scalable web applications, mentoring junior developers, and implementing best practices across the team.",
-        es: "Liderando el desarrollo de aplicaciones web escalables, mentorizando desarrolladores junior e implementando mejores prácticas en el equipo.",
-      },
-      technologies: ["Nuxt", "TypeScript", "PostgreSQL", "Docker", "AWS"],
-    },
-    {
-      id: "fullstack-dev",
-      role: "Full Stack Developer",
-      company: "Digital Agency",
-      period: "2021 - 2023",
-      description: {
-        en: "Developed custom web applications for clients across various industries, from e-commerce to SaaS platforms.",
-        es: "Desarrollé aplicaciones web personalizadas para clientes de diversas industrias, desde e-commerce hasta plataformas SaaS.",
-      },
-      technologies: ["Vue.js", "Node.js", "MongoDB", "Tailwind CSS"],
-    },
-    {
-      id: "frontend-dev",
+      id: "corporativo-elizalde",
       role: "Frontend Developer",
-      company: "Startup",
-      period: "2019 - 2021",
+      company: "Corporativo Elizalde",
+      period: "2023 - 2025",
       description: {
-        en: "Built responsive and accessible user interfaces for a SaaS product, improving user engagement by 40%.",
-        es: "Construí interfaces de usuario responsivas y accesibles para un producto SaaS, mejorando la participación del usuario en un 40%.",
+        en: "Built and maintained a web application for financial management, developing interactive dashboards, integrating RESTful APIs, and automating business processes for portfolio management, employee administration, and document generation.",
+        es: "Desarrollé y mantuve una aplicación web financiera, creando dashboards interactivos, integrando APIs RESTful y automatizando procesos de negocio para la gestión de portafolios, administración de empleados y generación de documentos.",
       },
-      technologies: ["React", "TypeScript", "Styled Components", "Jest"],
+      technologies: ["Vue.js", "Laravel", "REST APIs", "GitHub", "Bootstrap"],
     },
   ];
 

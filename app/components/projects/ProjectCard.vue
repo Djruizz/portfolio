@@ -6,20 +6,31 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
+const localePath = useLocalePath();
 </script>
 
 <template>
   <UCard
     :ui="{
-      root: 'group bg-elevated/50 border-default hover:border-primary/40 transition-all duration-300 overflow-hidden glow-primary-hover',
+      root: 'group bg-elevated/50 border-default hover:border-primary/40 transition-all duration-300 overflow-hidden glow-primary-hover cursor-pointer h-full',
       body: 'p-0',
     }"
+    @click="navigateTo(`/projects/${project.id}`)"
   >
     <div
       class="relative h-48 bg-linear-to-br from-primary/20 to-secondary/20 overflow-hidden"
     >
-      <div class="absolute inset-0 bg-grid-pattern opacity-20" />
-      <div class="absolute inset-0 flex items-center justify-center">
+      <img
+        v-if="project.image"
+        :src="project.image"
+        :alt="project.title"
+        class="absolute inset-0 w-full h-full object-cover object-top"
+      />
+      <div v-else class="absolute inset-0 bg-grid-pattern opacity-20" />
+      <div
+        v-if="!project.image"
+        class="absolute inset-0 flex items-center justify-center"
+      >
         <UIcon name="i-lucide-code-2" class="size-16 text-primary/40" />
       </div>
       <div class="absolute top-3 right-3">
@@ -47,7 +58,7 @@ const { t } = useI18n();
           :key="tech"
           color="neutral"
           variant="subtle"
-          size="xs"
+          size="sm"
           class="font-mono"
         >
           {{ tech }}
@@ -56,7 +67,7 @@ const { t } = useI18n();
           v-if="project.technologies.length > 4"
           color="neutral"
           variant="soft"
-          size="xs"
+          size="sm"
           class="font-mono"
         >
           +{{ project.technologies.length - 4 }}
@@ -73,6 +84,7 @@ const { t } = useI18n();
           color="primary"
           variant="ghost"
           size="xs"
+          @click.stop
         />
         <UButton
           v-if="project.repoUrl"
@@ -82,6 +94,7 @@ const { t } = useI18n();
           color="neutral"
           variant="ghost"
           size="xs"
+          @click.stop
         />
       </div>
     </div>

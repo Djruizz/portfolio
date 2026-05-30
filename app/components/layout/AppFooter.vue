@@ -12,7 +12,33 @@ const year = new Date().getFullYear();
       container: 'max-w-7xl',
     }"
   >
-    <template #top>
+    <template #left>
+      <div class="flex items-center gap-2">
+        <div
+          class="w-6 h-6 rounded-md bg-linear-to-br from-primary to-secondary flex items-center justify-center"
+        >
+          <span class="text-inverted font-bold text-xs">D</span>
+        </div>
+        <span class="font-mono font-semibold text-highlighted"
+          >dario<span class="text-primary">.dev</span></span
+        >
+      </div>
+    </template>
+    <template #right>
+      <div class="flex items-center gap-3">
+        <UButton
+          v-for="link in socialLinks"
+          :key="link.name"
+          :icon="link.icon"
+          :to="link.url"
+          target="_blank"
+          color="neutral"
+          variant="ghost"
+          size="sm"
+        />
+      </div>
+    </template>
+    <!-- <template #top>
       <div
         class="flex flex-col md:flex-row items-center justify-between gap-6 py-8"
       >
@@ -54,6 +80,22 @@ const year = new Date().getFullYear();
         <UIcon name="i-simple-icons-nuxtdotjs" class="size-4 text-primary" />
         <UIcon name="i-simple-icons-tailwindcss" class="size-4 text-primary" />
       </p>
+    </template> -->
+    <template #bottom>
+      <div class="flex items-center justify-center gap-3">
+        <p class="text-muted text-sm">
+          &copy; {{ year }} dario.dev — {{ t("footer.rights") }}
+        </p>
+        |
+        <p class="text-muted text-sm flex items-center gap-1.5">
+          {{ t("footer.built_with") }}
+          <UIcon name="i-simple-icons-nuxtdotjs" class="size-4 text-primary" />
+          <UIcon
+            name="i-simple-icons-tailwindcss"
+            class="size-4 text-primary"
+          />
+        </p>
+      </div>
     </template>
   </UFooter>
 </template>

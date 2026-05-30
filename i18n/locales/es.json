@@ -30,7 +30,15 @@
     "description": "Una colección de proyectos en los que he trabajado",
     "technologies": "Tecnologías",
     "live_demo": "Demo en vivo",
-    "source_code": "Código fuente"
+    "source_code": "Código fuente",
+    "back_to_projects": "Volver a Proyectos",
+    "context_title": "El Problema",
+    "solution_title": "Mi Solución",
+    "challenge_title": "Reto Técnico",
+    "tech_stack": "Stack Tecnológico",
+    "quick_links": "Enlaces Rápidos",
+    "roles_title": "Roles y Responsabilidades",
+    "gallery_title": "Galería del Proyecto"
   },
   "about": {
     "title": "Sobre Mí",
