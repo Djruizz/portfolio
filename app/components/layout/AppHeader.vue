@@ -24,12 +24,12 @@ const items = computed<NavigationMenuItem[]>(() => [
       <div class="flex items-center gap-2 group">
         <div class="relative">
           <div
-            class="w-8 h-8 rounded-lg bg-linear-to-br from-primary to-secondary flex items-center justify-center"
-          >
-            <span class="text-inverted font-bold text-sm">D</span>
-          </div>
-          <div
             class="absolute inset-0 rounded-lg bg-linear-to-br from-primary to-secondary opacity-0 group-hover:opacity-50 blur-lg transition-opacity duration-300"
+          />
+          <img
+            src="/logo.svg"
+            :alt="`${siteName} logo`"
+            class="relative w-8 h-8 rounded-lg"
           />
         </div>
         <span

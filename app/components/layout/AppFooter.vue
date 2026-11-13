@@ -15,11 +15,11 @@ const year = new Date().getFullYear();
   >
     <template #left>
       <div class="flex items-center gap-2">
-        <div
-          class="w-6 h-6 rounded-md bg-linear-to-br from-primary to-secondary flex items-center justify-center"
-        >
-          <span class="text-inverted font-bold text-xs">D</span>
-        </div>
+        <img
+          src="/logo.svg"
+          :alt="`${siteName} logo`"
+          class="w-6 h-6 rounded-md"
+        />
         <span class="font-mono font-semibold text-highlighted"
           >{{ siteName.split('.')[0] }}<span class="text-primary">.{{ siteName.split('.')[1] }}</span></span
         >

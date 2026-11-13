@@ -231,15 +231,15 @@ if (!project.value) {
           <div
             v-for="(image, index) in galleryImages"
             :key="index"
-            class="group relative overflow-hidden rounded-xl border border-default hover:border-primary/40 transition-all duration-300"
+            class="group relative overflow-hidden rounded-xl border border-default bg-elevated/30 hover:border-primary/40 transition-all duration-300 flex items-center justify-center"
           >
             <img
               :src="image"
               :alt="`${project.title} - ${index + 1}`"
-              class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              class="w-auto max-w-full max-h-[520px] h-auto object-contain transition-transform duration-500 group-hover:scale-105"
             />
             <div
-              class="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              class="pointer-events-none absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             />
           </div>
         </div>

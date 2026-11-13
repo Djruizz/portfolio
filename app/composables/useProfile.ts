@@ -208,6 +208,68 @@ export function useProfile() {
 
   const projects: Project[] = [
     {
+      id: "agendia",
+      title: "Agendia",
+      subtitle: {
+        en: "Appointment scheduling, bookings & business management platform",
+        es: "Plataforma integral de gestión de citas y negocios",
+      },
+      description: {
+        en: "Built a full-stack appointment scheduling and business management PWA for independent professionals and service businesses, featuring 24/7 online booking pages, conflict-free calendars, client and inventory tracking, and net profit analytics.",
+        es: "Desarrollé una plataforma web progresiva (PWA) para la gestión de citas y negocios dirigida a profesionales independientes y comercios, con reservas en línea 24/7, calendario sin empalmes, control de clientes e inventario y cálculo de ganancias netas.",
+      },
+      image: "/projects/agendia/BusinessDesktop.png",
+      gallery: [
+        "/projects/agendia/BusinessDesktop.png",
+        "/projects/agendia/Home.png",
+        "/projects/agendia/Calendar.png",
+        "/projects/agendia/Features.png",
+      ],
+      technologies: [
+        "Nuxt.js",
+        "TypeScript",
+        "Supabase",
+        "Tailwind CSS",
+        "Nuxt UI",
+        "PWA",
+      ],
+      liveUrl: "https://tuagendia.app",
+      featured: true,
+      year: 2026,
+      category: {
+        en: "SaaS & Business Management",
+        es: "SaaS y Gestión de Negocios",
+      },
+      context: {
+        en: "Independent professionals, salons, barbershops, and appointment-based businesses needed an all-in-one platform to prevent overlapping bookings, accept 24/7 online reservations without friction, and track real net profits. Existing solutions were often expensive, fragmented across chats and spreadsheets, or poorly optimized for mobile daily operations.",
+        es: "Los profesionales independientes, salones, barberías y negocios con cita previa necesitaban una plataforma centralizada para evitar empalmes de horarios, recibir reservas en línea 24/7 sin fricción y conocer su utilidad neta real. Las opciones existentes solían ser costosas, fragmentadas entre chats y hojas de cálculo, o poco prácticas para operar desde el celular.",
+      },
+      solution: {
+        en: "I architected a mobile-first Progressive Web App (PWA) using Nuxt.js, Nuxt UI, and Supabase. It unifies a conflict-free multi-staff calendar, customizable public booking pages with WhatsApp integration, a catalog for services and stock-tracked products, direct sales, operating expense tracking, and real-time earnings summaries.",
+        es: "Arquitecté una aplicación web progresiva (PWA) mobile-first usando Nuxt.js, Nuxt UI y Supabase. Unifica un calendario multi-profesional sin empalmes, páginas públicas personalizables con integración de WhatsApp para reservas directas, catálogo de servicios y productos con control de stock, ventas directas, registro de gastos y resúmenes de ganancias en tiempo real.",
+      },
+      challenge: {
+        en: "The main architectural challenge was preventing double bookings across multiple staff schedules while keeping public booking pages fast and isolating each business's data. I solved this by combining availability conflict validation with PostgreSQL Row Level Security (RLS) policies in Supabase and role-based access control for owners and staff in Nuxt.js.",
+        es: "El principal reto arquitectónico fue evitar traslapes de citas entre múltiples profesionales manteniendo rápidas las páginas públicas de reserva y aislando los datos de cada negocio. Lo resolví combinando validaciones de disponibilidad sin empalmes con políticas de Row Level Security (RLS) en Supabase y control de acceso basado en roles para dueños y colaboradores en Nuxt.js.",
+      },
+      roles: {
+        en: [
+          "Full-stack architecture & development",
+          "Multi-tenant database & RLS design",
+          "Booking engine & conflict-free calendar",
+          "Mobile-first PWA & UI/UX implementation",
+          "Financial, inventory & client management modules",
+        ],
+        es: [
+          "Arquitectura y desarrollo full-stack",
+          "Diseño de base de datos multi-tenant y políticas RLS",
+          "Motor de reservas y calendario sin empalmes",
+          "Implementación de PWA mobile-first y UI/UX",
+          "Módulos de finanzas, inventario y gestión de clientes",
+        ],
+      },
+    },
+    {
       id: "nutri-app",
       title: "Nutri App",
       subtitle: {
@@ -262,7 +324,7 @@ export function useProfile() {
   const experiences: Experience[] = [
     {
       id: "corporativo-elizalde",
-      role: "Frontend Developer",
+      role: "Frontend Intern Developer",
       company: "Corporativo Elizalde",
       period: "2023 - 2025",
       description: {
