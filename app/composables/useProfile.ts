@@ -208,6 +208,68 @@ export function useProfile() {
 
   const projects: Project[] = [
     {
+      id: "repsy",
+      title: "Repsy",
+      subtitle: {
+        en: "Workout tracking, routines & strength progress PWA",
+        es: "Aplicación PWA de rutinas, rachas y progreso en entrenamiento",
+      },
+      description: {
+        en: "Built a mobile-first workout and strength tracking PWA featuring weekly routine planning, guided exercise sessions with rest timers and RPE targets, streak calendars, and per-exercise weight progression charts.",
+        es: "Desarrollé una PWA mobile-first de seguimiento de entrenamiento y fuerza con planificación semanal de rutinas, sesiones guiadas con temporizadores y RPE, calendario de rachas y gráficas de evolución de peso por ejercicio.",
+      },
+      image: "/projects/repsy/Progress.png",
+      gallery: [
+        "/projects/repsy/Week.png",
+        "/projects/repsy/Workout.png",
+        "/projects/repsy/Calendar.png",
+        "/projects/repsy/Progress.png",
+      ],
+      technologies: [
+        "Nuxt.js",
+        "TypeScript",
+        "Firebase",
+        "Tailwind CSS",
+        "PWA",
+      ],
+      liveUrl: "https://repsy.pages.dev",
+      repoUrl: "https://github.com/Djruizz/repsy",
+      featured: true,
+      year: 2026,
+      category: {
+        en: "Fitness & Productivity",
+        es: "Fitness y Productividad",
+      },
+      context: {
+        en: "Athletes and gym-goers needed a fast, distraction-free mobile app to follow structured weekly training splits, track sets, reps, RPE, and rest intervals during workouts, and visualize long-term strength progression without bloated social feeds or slow interfaces.",
+        es: "Las personas que entrenan necesitaban una aplicación móvil rápida y sin distracciones para seguir rutinas semanales estructuradas, registrar series, repeticiones, RPE y descansos en tiempo real durante la sesión, y visualizar su progreso de fuerza a largo plazo.",
+      },
+      solution: {
+        en: "I built a Progressive Web App (PWA) with Nuxt, Tailwind CSS, and Firebase tailored for one-handed gym usage. It includes a weekly routine planner, live workout runner with warmups and rest timers, a monthly streak calendar, and an analytics view showing max weights, deltas, and historical set breakdowns per exercise.",
+        es: "Construí una aplicación web progresiva (PWA) con Nuxt, Tailwind CSS y Firebase pensada para usarse cómodamente en el gimnasio. Incluye planificador semanal de rutinas, modo de ejecución con calentamiento y tiempos de descanso, calendario mensual de rachas y analíticas de evolución de cargas por ejercicio.",
+      },
+      challenge: {
+        en: "The main challenge was keeping workout logging instantaneous under variable gym connectivity while calculating accurate streaks, session totals, and per-exercise weight progression across historical logs. I structured the data model in Firebase for fast per-user reads and implemented offline-ready PWA caching alongside reactive client-side aggregations.",
+        es: "El principal reto fue mantener un registro ágil durante el entrenamiento incluso con conectividad inestable, calculando con precisión rachas, sesiones mensuales y evolución histórica de pesos por ejercicio. Estructuré el modelo de datos en Firebase para lecturas rápidas por usuario e integré caché PWA junto con agregaciones reactivas en el cliente.",
+      },
+      roles: {
+        en: [
+          "Full-stack PWA development",
+          "Firebase data modeling & synchronization",
+          "Workout runner & rest timer UX",
+          "Streak & weight progression analytics",
+          "Mobile-first dark UI design",
+        ],
+        es: [
+          "Desarrollo full-stack de PWA",
+          "Modelado de datos y sincronización con Firebase",
+          "UX de ejecución de rutinas y temporizadores",
+          "Analíticas de rachas y evolución de cargas",
+          "Diseño de interfaz mobile-first",
+        ],
+      },
+    },
+    {
       id: "agendia",
       title: "Agendia",
       subtitle: {
